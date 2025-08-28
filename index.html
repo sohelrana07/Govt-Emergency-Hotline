@@ -3,14 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Google fonts -->
     <!-- Tailwind & DaisyUI cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -18,13 +10,27 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Tailwind & DaisyUI cdn -->
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Emergency-Hotline | Home</title>
   </head>
-  <body class="font-[Hind Madurai]">
+  <body style="font-family: 'Hind Madurai'" class="bg-[#f5fff6] min-h-lvh">
     <header>
       <!-- NavigationBar section -->
-      <nav class="bg-white flex justify-between items-center py-6 px-14">
+      <nav class="bg-white flex justify-between items-center p-6 md:px-14">
         <!-- left side -->
         <div class="flex items-center gap-2">
           <img src="assets/logo.png" class="w-14" alt="" />
@@ -34,22 +40,24 @@
         </div>
         <!-- right side -->
         <div class="flex items-center gap-5">
-          <div class="flex items-center gap-1">
+          <div class="flex items-center gap-2 p-3">
             <h1 class="font-[inter] font-bold">0</h1>
-            <h1 class="text-3xl">♥️</h1>
+            <img src="assets/heart.png" class="w-8" alt="" />
           </div>
-          <div class="flex items-center gap-1">
+          <div class="flex items-center gap-2 p-3">
             <h1 class="font-[inter] font-bold">100</h1>
-            <h1 class="text-3xl">🪙</h1>
+            <img src="assets/coin.png" class="w-8" alt="" />
           </div>
-          <button class="btn bg-[#00A63E] text-white rounded-3xl">
+          <button
+            class="btn w-24 h-12 bg-[#00A63E] text-white font-[Inter] text-[1rem] rounded-3xl"
+          >
             2 Copy
           </button>
         </div>
       </nav>
       <!-- Hero Section -->
       <section
-        class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center py-4"
+        class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center p-4"
       >
         <figure class="max-w-20 h-20 mx-auto">
           <img src="assets/logo-dark.png" class="w-full" alt="" />
@@ -64,8 +72,114 @@
       </section>
     </header>
     <main>
-      <section>
-        
+      <section
+        id="services"
+        class="w-full p-5 md:p-12 mx-auto grid grid-cols-1 md:grid-cols-12 md:gap-3"
+      >
+        <div
+          id="service-container"
+          class="sm:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-7 border-2 border-red-500"
+        >
+          <!-- card-1 -->
+          <div class="p-8 bg-white rounded-xl shadow-lg">
+            <div class="flex justify-between items-center">
+              <figure class="bg-gray-200 p-3 rounded-xl">
+                <img src="assets/emergency.png" class="w-8" alt="" />
+              </figure>
+              <span><i class="far fa-heart text-2xl text-[#5C5C5C]"></i> </span>
+            </div>
+            <div class="mt-4">
+              <h1 class="text-2xl font-bold">National Emergency Number</h1>
+              <p class="text-[#5C5C5C] text-xl">National Emergency</p>
+              <h1 class="text-3xl font-[Roboto] font-bold mt-6">999</h1>
+              <h3
+                class="w-14 p-1.5 bg-[#F2F2F2] rounded-2xl text-xl text-center text-[#5C5C5C]"
+              >
+                All
+              </h3>
+              <div class="flex justify-center items-center gap-2 mt-6">
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                >
+                  <i class="fa-regular fa-copy"></i>Copy
+                </button>
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="p-8 bg-white rounded-xl shadow-lg">
+            <div class="flex justify-between items-center">
+              <figure class="bg-gray-200 p-3 rounded-xl">
+                <img src="assets/emergency.png" class="w-8" alt="" />
+              </figure>
+              <span><i class="far fa-heart text-2xl text-[#5C5C5C]"></i> </span>
+            </div>
+            <div class="mt-4">
+              <h1 class="text-2xl font-bold">National Emergency Number</h1>
+              <p class="text-[#5C5C5C] text-xl">National Emergency</p>
+              <h1 class="text-3xl font-[Roboto] font-bold mt-6">999</h1>
+              <h3
+                class="w-14 p-1.5 bg-[#F2F2F2] rounded-2xl text-xl text-center text-[#5C5C5C]"
+              >
+                All
+              </h3>
+              <div class="flex justify-center items-center gap-2 mt-6">
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                >
+                  <i class="fa-regular fa-copy"></i>Copy
+                </button>
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="p-8 bg-white rounded-xl shadow-lg">
+            <div class="flex justify-between items-center">
+              <figure class="bg-gray-200 p-3 rounded-xl">
+                <img src="assets/emergency.png" class="w-8" alt="" />
+              </figure>
+              <span><i class="far fa-heart text-2xl text-[#5C5C5C]"></i> </span>
+            </div>
+            <div class="mt-4">
+              <h1 class="text-2xl font-bold">National Emergency Number</h1>
+              <p class="text-[#5C5C5C] text-xl">National Emergency</p>
+              <h1 class="text-3xl font-[Roboto] font-bold mt-6">999</h1>
+              <h3
+                class="w-14 p-1.5 bg-[#F2F2F2] rounded-2xl text-xl text-center text-[#5C5C5C]"
+              >
+                All
+              </h3>
+              <div class="flex justify-center items-center gap-2 mt-6">
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                >
+                  <i class="fa-regular fa-copy"></i>Copy
+                </button>
+                <button
+                  class="btn w-1/2 btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                >
+                  <i class="fa-solid fa-phone"></i> Call
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- aside section -->
+        <aside id="service-history" class="bg-red-500 col-span-3">
+          <h1>service-history</h1>
+        </aside>
       </section>
     </main>
     <script src="js/index.js"></script>
