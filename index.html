@@ -80,11 +80,11 @@
     <main>
       <section
         id="services"
-        class="w-full p-5 md:p-12 mx-auto grid grid-cols-1 md:grid-cols-12 md:gap-5"
+        class="w-full p-5 md:p-12 mx-auto grid grid-cols-1 md:grid-cols-12 gap-5"
       >
         <div
           id="service-container"
-          class="col-span-9 grid grid-cols-1 md:grid-cols-3 gap-5"
+          class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-5"
         >
           <!-- card-1 -->
           <div class="p-7 bg-white rounded-xl shadow-lg">
@@ -398,9 +398,30 @@
         <!-- aside section -->
         <aside
           id="service-history"
-          class="bg-white rounded-xl shadow-lg col-span-3"
+          class="md:col-span-3 bg-white rounded-xl shadow-lg p-6"
         >
-          <h1>service-history</h1>
+          <!-- History and Clear btn -->
+          <div class="flex justify-between items-center">
+            <h1 class="text-xl font-medium">
+              <i class="fa-regular fa-clock text-xl text-[#5C5C5C]"></i> Call
+              History
+            </h1>
+            <button
+              class="btn bg-[#00A63E] text-white font-[Inter] text-[1rem] rounded-3xl"
+            >
+              Clear
+            </button>
+          </div>
+          <!-- History List -->
+          <div
+            class="bg-[#FAFAFA] flex justify-between items-center p-2.5 rounded-lg mt-4 mb-2"
+          >
+            <div>
+              <h1 class="text-[1.125rem]">জাতীয় জরুরি সেবা</h1>
+              <h3 class="text-[1.125rem] text-[#5C5C5C]">999</h3>
+            </div>
+            <span>11:36:58 AM</span>
+          </div>
         </aside>
       </section>
     </main>
