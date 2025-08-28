@@ -3,12 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google fonts -->
+    <!-- Tailwind & DaisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind & DaisyUI cdn -->
     <title>Emergency-Hotline | Home</title>
   </head>
-  <body>
+  <body class="font-[Hind Madurai]">
     <header>
-
+      <!-- NavigationBar section -->
+      <nav class="bg-white flex justify-between items-center py-6 px-14">
+        <!-- left side -->
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" class="w-14" alt="" />
+          <h1 class="text-xl text-[#006747] font-extrabold">
+            Emergency <br />Service
+          </h1>
+        </div>
+        <!-- right side -->
+        <div class="flex items-center gap-5">
+          <div class="flex items-center gap-1">
+            <h1 class="font-[inter] font-bold">0</h1>
+            <h1 class="text-3xl">♥️</h1>
+          </div>
+          <div class="flex items-center gap-1">
+            <h1 class="font-[inter] font-bold">100</h1>
+            <h1 class="text-3xl">🪙</h1>
+          </div>
+          <button class="btn bg-[#00A63E] text-white rounded-3xl">
+            2 Copy
+          </button>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section
+        class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center py-4"
+      >
+        <figure class="max-w-20 h-20 mx-auto">
+          <img src="assets/logo-dark.png" class="w-full" alt="" />
+        </figure>
+        <h1 class="text-4xl font-bold text-white my-3">
+          Emergency Service Directory
+        </h1>
+        <h3 class="text-xl font-semibold text-white">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </h3>
+      </section>
     </header>
+    <main>
+      <section>
+        
+      </section>
+    </main>
     <script src="js/index.js"></script>
   </body>
 </html>
