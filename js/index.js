@@ -58,13 +58,15 @@ for (const btn of callBtn) {
 
     // Call History here
     const historyContainer = getId("history-container");
+
+    // new Element create
     const newElement = document.createElement("div");
     newElement.innerHTML = `
         <div
             class="bg-[#FAFAFA] flex justify-between items-center p-4 rounded-lg mt-4 mb-2"
           >
             <div>
-              <h1 class="text-[1rem] md:text-[1rem] font-medium">
+              <h1 class="text-[1rem] font-medium">
                 ${service.title}
               </h1>
               <h3 class="text-[1.125rem] text-[#5C5C5C]">${service.number}</h3>
