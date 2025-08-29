@@ -29,7 +29,7 @@
   </head>
   <body style="font-family: 'Hind Madurai'" class="bg-[#f5fff6] min-h-lvh">
     <header>
-      <!-- NavigationBar section -->
+      <!-- NavigationBar section start here-->
       <nav
         class="bg-white flex flex-col md:flex-row justify-between md:items-center px-5 py-3 md:p-5 md:px-14"
       >
@@ -41,34 +41,41 @@
           </h1>
         </div>
         <!-- right side -->
-        <div class="flex justify-end md:justify-between items-center gap-5">
+        <div
+          class="flex justify-end md:justify-between items-center gap-5 mt-2 md:mt-0"
+        >
           <div
             class="flex items-center gap-5 p-3 bg-[#41ff6b1a] rounded-[50px]"
           >
-            <h1 style="font-family: 'Inter'" class="font-bold">0</h1>
+            <h1 id="heart-count" style="font-family: 'Inter'" class="font-bold">
+              0
+            </h1>
             <img src="assets/heart.png" class="w-8" alt="" />
           </div>
           <div
             class="flex items-center gap-2 p-3 bg-[#41ff6b1a] rounded-[50px]"
           >
-            <h1 style="font-family: 'Inter'" class="font-bold">100</h1>
+            <h1 style="font-family: 'Inter'" id="coins" class="font-bold">
+              100
+            </h1>
             <img src="assets/coin.png" class="w-8" alt="" />
           </div>
           <button
-            class="btn w-24 h-12 bg-[#00A63E] text-white font-[Inter] text-[1rem] rounded-3xl"
+            style="font-family: 'Inter'"
+            class="btn w-24 h-12 bg-[#00A63E] text-white text-[1rem] font-semibold rounded-3xl"
           >
-            <span>0</span> Copy
+            <span id="copy-count">0</span> Copy
           </button>
         </div>
       </nav>
-      <!-- Hero Section -->
+      <!-- Hero Section start here-->
       <section
         class="banner bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center p-4"
       >
         <figure class="max-w-20 h-20 mx-auto">
           <img src="assets/logo-dark.png" class="w-full" alt="" />
         </figure>
-        <h1 class="text-4xl font-bold text-white mb-3 mt-4">
+        <h1 class="text-4xl font-bold text-white mb-3 mt-5">
           জরুরি সেবা ডিরেক্টরি
         </h1>
         <h3 class="text-xl font-semibold text-white">
@@ -79,40 +86,47 @@
     </header>
     <main>
       <section
-        id="services"
+        id="main-section"
         class="w-full p-5 md:p-12 mx-auto grid grid-cols-1 md:grid-cols-12 gap-5"
       >
+        <!-- Emergency Hotline Section start here -->
         <div
-          id="service-container"
-          class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-5"
+          id="hotline-section"
+          class="md:col-span-9 grid sm:grid-cols-1 md:grid-cols-3 gap-5"
         >
           <!-- card-1 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/emergency.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i
+              ></span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">জাতীয় জরুরি সেবা</h1>
-              <p class="text-[#5C5C5C] text-[1.125rem]">National Emergency</p>
+              <h1 class="text-xl font-bold">জাতীয় জরুরি সেবা</h1>
+              <p class="text-[#5C5C5C] text-[1.125rem]">
+                National Emergency Service
+              </p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 999
               </h2>
               <h3
-                class="w-28 p-1 bg-[#F2F2F2] rounded-3xl text-[1.125rem] text-center text-[#5C5C5C]"
+                class="w-24 p-1 bg-[#F2F2F2] rounded-3xl text-[1.125rem] text-center text-[#5C5C5C]"
               >
                 সার্বজনীন
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -121,15 +135,17 @@
           </div>
 
           <!-- card-2 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#DFEFFF] p-3.5 rounded-xl">
                 <img src="assets/police.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i
+              ></span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">পুলিশ</h1>
+              <h1 class="text-xl font-bold">পুলিশ</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">Police</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 999
@@ -141,12 +157,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -155,15 +173,17 @@
           </div>
 
           <!-- card-3 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/fire-service.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">ফায়ার সার্ভিস</h1>
+              <h1 class="text-xl font-bold">ফায়ার সার্ভিস</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">Fire Service</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 999
@@ -175,12 +195,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -189,32 +211,36 @@
           </div>
 
           <!-- card-4 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/ambulance.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">অ্যাম্বুলেন্স</h1>
+              <h1 class="text-xl font-bold">অ্যাম্বুলেন্স</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">Ambulance</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 1994-999999
               </h2>
               <h3
-                class="w-16 p-1 bg-[#F2F2F2] rounded-3xl text-[1.125rem] text-center text-[#5C5C5C]"
+                class="w-20 p-1 bg-[#F2F2F2] rounded-3xl text-[1.125rem] text-center text-[#5C5C5C]"
               >
                 স্বাস্থ্য
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -223,15 +249,17 @@
           </div>
 
           <!-- card-5 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/emergency.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">নারী ও শিশু সহায়তা</h1>
+              <h1 class="text-xl font-bold">নারী ও শিশু সহায়তা</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">
                 Women & Child Helpline
               </p>
@@ -245,12 +273,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -259,16 +289,20 @@
           </div>
 
           <!-- card-6 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/emergency.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">দুদক</h1>
-              <p class="text-[#5C5C5C] text-[1.125rem]">Anti-Corruption</p>
+              <h1 class="text-xl font-bold">দুদক</h1>
+              <p class="text-[#5C5C5C] text-[1.125rem]">
+                Anti-Corruption Commission
+              </p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 106
               </h2>
@@ -279,12 +313,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -293,15 +329,17 @@
           </div>
 
           <!-- card-7 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/emergency.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">বিদ্যুৎ বিভ্রাট</h1>
+              <h1 class="text-xl font-bold">বিদ্যুৎ বিভ্রাট</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">Electricity Outage</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 16216
@@ -313,12 +351,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -327,16 +367,18 @@
           </div>
 
           <!-- card-8 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/emergency.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">ব্র্যাক</h1>
-              <p class="text-[#5C5C5C] text-[1.125rem]">Brac</p>
+              <h1 class="text-xl font-bold">ব্র্যাক</h1>
+              <p class="text-[#5C5C5C] text-[1.125rem]">BRAC</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 16445
               </h2>
@@ -347,12 +389,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -361,15 +405,17 @@
           </div>
 
           <!-- card-9 -->
-          <div class="p-7 bg-white rounded-xl shadow-lg">
+          <div class="p-7 bg-white rounded-xl shadow-xl">
             <div class="flex justify-between items-center">
               <figure class="bg-[#FFE3E2] p-3.5 rounded-xl">
                 <img src="assets/Bangladesh-Railway.png" class="w-8" alt="" />
               </figure>
-              <span><i class="far fa-heart text-3xl text-[#5C5C5C]"></i> </span>
+              <span
+                ><i class="far fa-heart text-3xl text-[#5C5C5C] heart-icon"></i>
+              </span>
             </div>
             <div class="mt-4">
-              <h1 class="text-2xl font-bold">বাংলাদেশ রেলওয়ে</h1>
+              <h1 class="text-xl font-bold">বাংলাদেশ রেলওয়ে</h1>
               <p class="text-[#5C5C5C] text-[1.125rem]">Bangladesh Railway</p>
               <h2 style="font-family: 'Roboto'" class="text-3xl font-bold mt-6">
                 163
@@ -381,12 +427,14 @@
               </h3>
               <div class="flex justify-center items-center gap-2 mt-6">
                 <button
-                  class="btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
+                  style="font-family: 'Roboto'"
+                  class="copy-btn btn w-1/2 text-[#5C5C5C] hover:bg-black hover:text-white rounded-xl"
                 >
                   <i class="fa-regular fa-copy"></i> Copy
                 </button>
                 <button
-                  class="btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
+                  style="font-family: 'Roboto'"
+                  class="call-btn btn w-1/2 bg-[#00A63E] text-white rounded-xl hover:bg-neutral-500"
                 >
                   <i class="fa-solid fa-phone"></i> Call
                 </button>
@@ -395,10 +443,10 @@
           </div>
         </div>
 
-        <!-- aside section -->
+        <!-- History section start here-->
         <aside
-          id="service-history"
-          class="md:col-span-3 bg-white rounded-xl shadow-lg p-6"
+          id="history-section"
+          class="md:col-span-3 bg-white rounded-xl shadow-xl p-6"
         >
           <!-- History and Clear btn -->
           <div class="flex justify-between items-center">
@@ -407,21 +455,15 @@
               History
             </h1>
             <button
-              class="btn bg-[#00A63E] text-white font-[Inter] text-[1rem] rounded-3xl"
+              id="clear-btn"
+              style="font-family: 'Inter'"
+              class="btn bg-[#00A63E] text-white text-[1rem] font-semibold rounded-3xl hover:bg-red-500"
             >
               Clear
             </button>
           </div>
           <!-- History List -->
-          <div
-            class="bg-[#FAFAFA] flex justify-between items-center p-2.5 rounded-lg mt-4 mb-2"
-          >
-            <div>
-              <h1 class="text-[1.125rem]">জাতীয় জরুরি সেবা</h1>
-              <h3 class="text-[1.125rem] text-[#5C5C5C]">999</h3>
-            </div>
-            <span>11:36:58 AM</span>
-          </div>
+          <div id="history-container"></div>
         </aside>
       </section>
     </main>
