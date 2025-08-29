@@ -25,13 +25,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Emergency-Hotline | Home</title>
+    <title>জরুরি সেবা ডিরেক্টরি</title>
+    <link
+      rel="shortcut icon"
+      href="assets/bangladesh-removebg-preview.png"
+      type="image/x-icon"
+    />
   </head>
   <body style="font-family: 'Hind Madurai'" class="bg-[#f5fff6] min-h-lvh">
     <header>
       <!-- NavigationBar section start here-->
       <nav
-        class="bg-white flex flex-col md:flex-row justify-between md:items-center px-5 py-3 md:p-5 md:px-14"
+        class="bg-white flex justify-between items-center px-5 py-3 md:p-5 md:px-14"
       >
         <!-- left side -->
         <div class="flex items-center gap-2">
@@ -41,9 +46,7 @@
           </h1>
         </div>
         <!-- right side -->
-        <div
-          class="flex justify-end md:justify-between items-center gap-5 mt-2 md:mt-0"
-        >
+        <div class="hidden md:flex justify-between items-center gap-5">
           <div
             class="flex items-center gap-5 p-3 bg-[#41ff6b1a] rounded-[50px]"
           >
@@ -66,6 +69,53 @@
           >
             <span id="copy-count">0</span> Copy
           </button>
+        </div>
+
+        <!-- dropdown menuList -->
+        <div class="block md:hidden dropdown dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1">
+            <i class="fa-solid fa-list-ul text-2xl"></i>
+          </div>
+          <div
+            tabindex="0"
+            class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+          >
+            <!-- item-1 -->
+            <div
+              class="w-28 flex justify-center items-center gap-3 p-3 bg-[#41ff6a31] rounded-[50px]"
+            >
+              <h1
+                id="heart-count-mobile"
+                style="font-family: 'Inter'"
+                class="font-bold"
+              >
+                0
+              </h1>
+              <img src="assets/heart.png" class="w-8" alt="" />
+            </div>
+
+            <!-- item-2 -->
+            <div
+              class="w-28 flex justify-center items-center gap-3 p-3 my-2 bg-[#41ff6a31] rounded-[50px]"
+            >
+              <h1
+                style="font-family: 'Inter'"
+                id="coins-mobile"
+                class="font-bold"
+              >
+                100
+              </h1>
+              <img src="assets/coin.png" class="w-8" alt="" />
+            </div>
+
+            <!-- item-3 -->
+            <button
+              style="font-family: 'Inter'"
+              class="btn w-28 h-14 bg-[#00A63E] text-white text-[1rem] font-semibold rounded-3xl"
+            >
+              <span id="copy-count-mobile">0</span> Copy
+            </button>
+          </div>
         </div>
       </nav>
       <!-- Hero Section start here-->

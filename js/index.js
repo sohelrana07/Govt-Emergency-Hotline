@@ -4,6 +4,36 @@ function getId(id) {
   return Element;
 }
 
+// getId("menu-list").addEventListener("click", function () {
+//   const newDiv = document.createElement("div");
+//   newDiv.innerHTML = `
+//   <div class="flex justify-between items-center gap-5">
+//           <div
+//             class="flex items-center gap-5 p-3 bg-[#41ff6b1a] rounded-[50px]"
+//           >
+//             <h1 id="heart-count" style="font-family: 'Inter'" class="font-bold">
+//               0
+//             </h1>
+//             <img src="assets/heart.png" class="w-8" alt="" />
+//           </div>
+//           <div
+//             class="flex items-center gap-2 p-3 bg-[#41ff6b1a] rounded-[50px]"
+//           >
+//             <h1 style="font-family: 'Inter'" id="coins" class="font-bold">
+//               100
+//             </h1>
+//             <img src="assets/coin.png" class="w-8" alt="" />
+//           </div>
+//           <button
+//             style="font-family: 'Inter'"
+//             class="btn w-24 h-12 bg-[#00A63E] text-white text-[1rem] font-semibold rounded-3xl"
+//           >
+//             <span id="copy-count">0</span> Copy
+//           </button>
+//         </div>
+//   `;
+// });
+
 // Heart Counts Functionalities area here
 const heartIcon = document.getElementsByClassName("heart-icon");
 for (const heart of heartIcon) {
