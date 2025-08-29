@@ -4,25 +4,15 @@ function getId(id) {
   return Element;
 }
 
-// getElementsId
-function getElementId(id) {
-  const Elements = document.querySelectorAll(id);
-  return Elements;
-}
-
 // Heart Counts Functionalities area here
 const heartIcon = document.getElementsByClassName("heart-icon");
 for (const heart of heartIcon) {
   heart.addEventListener("click", function () {
-    // const heartCount = Number(getId("heart-count").innerText);
-    // const count = heartCount + 1;
-    // getId("heart-count").innerText = count;
-    // return;
-    const heartCount = Document.getElementsByClassName("heart-counts").innerText;
-    const heartCountNumber = Number(heartCount);
-    console.log(heartCountNumber);
-    for (const count of heartCountNumber) {
-    }
+    const heartCount = Number(getId("heart-count").innerText);
+    const count = heartCount + 1;
+    getId("heart-count").innerText = count;
+    getId("heart-count-mobile").innerText = count;
+    return;
   });
 }
 
@@ -49,6 +39,7 @@ for (const btn of callBtn) {
     }
     const cutCoins = totalCoins - 20;
     getId("coins").innerText = cutCoins;
+    getId("coins-mobile").innerText = cutCoins;
 
     // Calling Alert here
     const service = {
@@ -103,5 +94,6 @@ for (const Btn of copyBtn) {
     const totalCopies = Number(getId("copy-count").innerText);
     const copyCount = totalCopies + 1;
     getId("copy-count").innerText = copyCount;
+    getId("copy-count-mobile").innerText = copyCount;
   });
 }
